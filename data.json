@@ -1,0 +1,49 @@
+{
+  "cars": [
+    {
+      "brand": "Cadillac",
+      "model": "Escalade",
+      "year": 2020
+    },
+    {
+      "brand": "Cadillac",
+      "model": "CT4",
+      "year": 2021
+    },
+    {
+      "brand": "Cadillac",
+      "model": "CT5",
+      "year": 2022
+    },
+    {
+      "brand": "Dodge",
+      "model": "Challenger",
+      "year": 2020
+    },
+    {
+      "brand": "Dodge",
+      "model": "Charger",
+      "year": 2021
+    },
+    {
+      "brand": "Dodge",
+      "model": "Durango",
+      "year": 2022
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Accent",
+      "year": 2020
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": 2021
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Ioniq 5",
+      "year": 2022
+    }
+  ]
+}
