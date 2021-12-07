@@ -9,7 +9,7 @@ jest.mock("../../hooks/useCarsData", () => ({
   useGetModels: () => [["test-model-1", "test-model-2"]],
 }));
 
-test("submit button disabled by default", async () => {
+test("submit button disabled by default", () => {
   render(<CarForm />);
   fireEvent.click(screen.getByText("Search cars"));
 
@@ -45,17 +45,14 @@ test("submit button is enabled after brand field is filled in", async () => {
 });
 
 test("model select is disabled by default", async () => {
-  const { getByText, container } = render(<CarForm />);
+  const { container } = render(<CarForm />);
 
   const modelsSelect = container.querySelectorAll(".MuiSelect-nativeInput")[1];
   expect(modelsSelect).toHaveAttribute("disabled");
-
-  const submitButton = getByText("Search cars");
-  expect(submitButton).toHaveAttribute("disabled");
 });
 
 test("submit button is enabled after model field is filled in", async () => {
-  const { getByText, getAllByRole, container } = render(<CarForm />);
+  const { getAllByRole, container } = render(<CarForm />);
   const brandsSelect = getAllByRole("button")[0];
 
   userEvent.click(brandsSelect);
@@ -66,7 +63,4 @@ test("submit button is enabled after model field is filled in", async () => {
 
   const modelsSelect = container.querySelectorAll(".MuiSelect-nativeInput")[1];
   expect(modelsSelect).not.toHaveAttribute("disabled");
-
-  const submitButton = getByText("Search cars");
-  expect(submitButton).not.toHaveAttribute("disabled");
 });
