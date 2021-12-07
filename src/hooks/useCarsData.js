@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchBrands, fetchModels } from "../api/cars";
+
 export function useGetBrands() {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
